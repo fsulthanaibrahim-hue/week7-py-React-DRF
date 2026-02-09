@@ -51,7 +51,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django.middleware.common.CommonMiddleware',
 ]
 
 ROOT_URLCONF = 'student_backend.urls'
@@ -124,12 +123,15 @@ STATIC_URL = 'static/'
 
 
 CORS_ALLOWED_ORIGINS = [
-   "http://localhost:5173",
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
 ]
 
 
+
 REST_FRAMEWORK = {
-    'DEFAULT_PERMISSIONS_CLASSES': [
+    'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.AllowAny',
     ]
 }
+

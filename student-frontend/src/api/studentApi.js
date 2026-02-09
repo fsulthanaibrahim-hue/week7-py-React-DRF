@@ -12,10 +12,10 @@ export const addStudent = async (student) => {
   return res.data;
 };
 
-export const updateStudent = async (id, student) => {
-  const res = await axios.put(`${API_BASE_URL}${id}/`, student);
-  return res.data;
+export const updateStudent = (id, student) => {
+  return axios.put(`http://127.0.0.1:8000/api/students/${id}/`, student);
 };
+
 
 export const deleteStudent = async (id) => {
   const res = await axios.delete(`${API_BASE_URL}${id}/`);
