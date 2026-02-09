@@ -7,7 +7,7 @@ from .models import Student, Teacher, Course
 from .serializers import StudentSerializer, TeacherSerializer, CourseSerializer
 
 
-# ---------------- STUDENT ----------------
+# ---------------- Student ----------------
 
 class StudentListCreateAPIView(APIView):
 
@@ -47,7 +47,7 @@ class StudentDetailAPIView(APIView):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 
-# ---------------- TEACHER ----------------
+# ---------------- Teacher ----------------
 
 class TeacherListCreateAPIView(APIView):
 
@@ -87,7 +87,7 @@ class TeacherDetailAPIView(APIView):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 
-# ---------------- COURSE ----------------
+# ---------------- Course ----------------
 
 class CourseListCreateAPIView(APIView):
 
